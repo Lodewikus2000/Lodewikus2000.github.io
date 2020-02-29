@@ -1,6 +1,5 @@
 :root {
   --color-0: #1f1f1f;
-  --color-1: #f2ff49;
   --color-2: #00AA00;
   --color-3: #00AAAA;
   --color-4: #AA0000;
@@ -66,7 +65,7 @@ body {
 
 header {
   /* font-size: 1.5rem; */
-  overflow: hidden;
+
 }
 
 footer {
@@ -77,14 +76,14 @@ footer {
 #flexbox_wrapper {
   display: flex;
   flex-direction: row-reverse;
-  border-right: solid 4px;
+  border-right: solid 2px;
 }
 
 
 
 h1, h2, h3, h4, h5, h6 {
   background-color: LightGrey;
-
+  overflow: hidden;
   margin: 0;
   padding: 2rem 3rem 2rem 3rem;
 
@@ -96,12 +95,12 @@ h1:hover{
 }
 h2:hover{
 
-  background-color: var(--color-1);
+  background-color: var(--color-14);
 
 }
 h3:hover{
 
-  background-color: var(--color-1);
+  background-color: var(--color-14);
 
 }
 p {
@@ -147,14 +146,14 @@ h6 {
 }
 
 .header, .footer {
-  border: solid 4px;
+  border: solid 2px;
   margin: 0px;
   background-color: white;
 }
 
 .box {
 
-  border-bottom: solid 4px;
+  border-bottom: solid 2px;
 }
 
 .box:last-child{
@@ -162,10 +161,10 @@ h6 {
 }
 
 .navbar {
-  margin-top:-4px;
+  margin-top:-2px;
   flex-grow: 0;
-  border-top: solid 4px;
-  border-bottom: solid 4px;
+  border-top: solid 2px;
+  border-bottom: solid 2px;
   background-color: white;
   height: inherit;
   width: auto;
@@ -177,8 +176,8 @@ h6 {
 
 .content {
   flex-grow: 1;
-  border-left: solid 4px;
-  border-right: solid 4px;
+  border-left: solid 2px;
+  border-right: solid 2px;
 }
 
 .content > * {
@@ -221,7 +220,7 @@ h6 {
 
   .navbar {
       align-self:stretch;
-      border-left: solid 4px;
+      border-left: solid 2px;
   }
 
 

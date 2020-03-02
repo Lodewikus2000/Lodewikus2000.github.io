@@ -79,25 +79,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-h1:hover{
-  /* animation-name: headerHover;
-  animation-duration: 500ms;
-  animation-delay: 0ms;
-  animation-fill-mode: both;
-
-  animation-iteration-count: 1; */
-
-  background-color: aqua;
-
-}
-h2:hover{
-  background-color: aqua;
-
-}
-h3:hover{
-  background-color: aqua;
-
-}
 p {
   max-width: 550px;
   text-align: justify;
@@ -110,31 +91,42 @@ ul
   margin:  1rem 3rem 1rem 3rem;
 }
 
-.header .boxbar {
-  background-color: Teal;
-  overflow: hidden;
-}
-
 .boxbar {
   background-color: Silver;
   overflow: hidden;
 }
+.boxbar:hover {
+  background-color: Aqua;
+  overflow: hidden;
+}
+
+.header .boxbar {
+  background-color: var(--AlmostBlack);
+  overflow: hidden;
+}
+.header .boxbar:hover {
+  background-color: Purple;
+
+  overflow: hidden;
+}
+
+
 
 h1 {
   /* background-image: url('../noise2.png'); */
   color: white;
-  text-shadow: 2px 2px 0px var(--AlmostBlack);
+  /* text-shadow: 2px 2px 0px var(--AlmostBlack); */
 
   font-size: 4em;
   padding: 2rem 3rem 2rem 3rem;
 }
 h2 {
-  text-shadow: 2px 2px 0px white;
+  /* text-shadow: 2px 2px 0px white; */
   font-size: 2.5em;
   padding: 2rem 3rem 2rem 3rem;
 }
 h3 {
-  text-shadow: 2px 2px 0px white;
+  /* text-shadow: 2px 2px 0px white; */
   font-size: 2em;
   padding: 1.6rem 3rem 1.6rem 3rem;
 }
@@ -151,18 +143,14 @@ h6 {
   padding: 1.3rem 3rem 1.3rem 3rem;
 }
 
-.header, .footer {
-  border-top: solid 2px;
-  border-left: solid 2px;
-  border-right: solid 2px;
-  margin: 0px;
+.header{
+  border: solid 2px;
+  margin: 0 0 -2px 0;
   overflow: hidden;
 }
-.header, .footer {
-  border-bottom: solid 2px;
-  border-left: solid 2px;
-  border-right: solid 2px;
-  margin: 0px;
+.footer {
+  border: solid 2px;
+  margin: -2px 0 0 0;
   overflow: hidden;
 }
 
@@ -171,13 +159,12 @@ h6 {
 
 }
 
-.box:first-child{
+/* .box:first-child{
   border-top: none;
-}
+} */
 
 .navbar {
-  margin-top:-2px;
-  margin-bottom:-2px;
+
   flex-grow: 0;
   border-top: solid 2px;
   border-bottom: solid 2px;
@@ -238,6 +225,7 @@ h6 {
   .navbar {
       align-self:stretch;
       border-left: solid 2px;
+        margin: 0 0 -2px 0;
   }
 
 

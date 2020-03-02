@@ -1,19 +1,6 @@
 :root {
-  --color-0: #1f1f1f;
-  --color-2: #00AA00;
-  --color-3: #00AAAA;
-  --color-4: #AA0000;
-  --color-5: #AA00AA;
-  --color-6: #AA5500;
-  --color-7: #AAAAAA;
-  --color-8: #555555;
-  --color-9: #8888ff;
-  --color-10: #55FF55;
-  --color-11: #55FFFF;
-  --color-12: #FF5555;
-  --color-13: #FF55FF;
-  --color-14: #FFFF55;
-  --color-15: #FFFFFF;
+  --AlmostBlack: #202020;
+
 }
 
 @font-face {
@@ -40,7 +27,10 @@
     src: url('../fonts/texgyreheros-regular-webfont.woff');
 }
 
-
+@font-face {
+    font-family: 'vga';
+    src: url('../fonts/MorePerfectDOSVGA.ttf');
+}
 
 
 html {
@@ -48,12 +38,12 @@ html {
 }
 
 body {
-  font-family: "tex_gyre_heros", Helvetica, Arial, sans-serif;
+  font-family: 'tex_gyre_heros', Helvetica, Arial, sans-serif;
 
-  color: var(--color-0);
+  color: var(--AlmostBlack);
 
   padding:0;
-  background-color: var(--color-15);
+  background-color: white;
 
   max-width: 1000px;
   margin-top: 8px;
@@ -82,25 +72,30 @@ footer {
 
 
 h1, h2, h3, h4, h5, h6 {
-  background-color: LightGrey;
-  overflow: hidden;
+
+  font-family: "vga";
   margin: 0;
   padding: 2rem 3rem 2rem 3rem;
-
 }
-h1:hover{
 
-  background-color: var(--color-12);
+
+h1:hover{
+  /* animation-name: headerHover;
+  animation-duration: 500ms;
+  animation-delay: 0ms;
+  animation-fill-mode: both;
+
+  animation-iteration-count: 1; */
+
+  background-color: aqua;
 
 }
 h2:hover{
-
-  background-color: var(--color-14);
+  background-color: aqua;
 
 }
 h3:hover{
-
-  background-color: var(--color-14);
+  background-color: aqua;
 
 }
 p {
@@ -115,20 +110,31 @@ ul
   margin:  1rem 3rem 1rem 3rem;
 }
 
+.header .boxbar {
+  background-color: Teal;
+  overflow: hidden;
+}
+
+.boxbar {
+  background-color: Silver;
+  overflow: hidden;
+}
+
 h1 {
   /* background-image: url('../noise2.png'); */
   color: white;
-  text-shadow: 2px 2px 0px var(--color-0);
-  background-color: var(--color-9);
+  text-shadow: 2px 2px 0px var(--AlmostBlack);
+
   font-size: 4em;
   padding: 2rem 3rem 2rem 3rem;
 }
 h2 {
+  text-shadow: 2px 2px 0px white;
   font-size: 2.5em;
   padding: 2rem 3rem 2rem 3rem;
 }
 h3 {
-
+  text-shadow: 2px 2px 0px white;
   font-size: 2em;
   padding: 1.6rem 3rem 1.6rem 3rem;
 }
@@ -146,26 +152,37 @@ h6 {
 }
 
 .header, .footer {
-  border: solid 2px;
+  border-top: solid 2px;
+  border-left: solid 2px;
+  border-right: solid 2px;
   margin: 0px;
-  background-color: white;
+  overflow: hidden;
+}
+.header, .footer {
+  border-bottom: solid 2px;
+  border-left: solid 2px;
+  border-right: solid 2px;
+  margin: 0px;
+  overflow: hidden;
 }
 
 .box {
+  border-top: solid 2px;
 
-  border-bottom: solid 2px;
 }
 
-.box:last-child{
-  border-bottom: none;
+.box:first-child{
+  border-top: none;
 }
 
 .navbar {
   margin-top:-2px;
+  margin-bottom:-2px;
   flex-grow: 0;
   border-top: solid 2px;
   border-bottom: solid 2px;
   background-color: white;
+
   height: inherit;
   width: auto;
   position: sticky;
@@ -231,6 +248,7 @@ h6 {
   h1 {
     font-size: 3em;
     padding: 1.3rem 1.5rem 1.3rem 1.5rem;
+    width: auto;
   }
   h2 {
     font-size: 2em;
@@ -270,4 +288,16 @@ h6 {
     margin:  1rem 1.5rem 1rem 1.5rem;
   }
 
+}
+
+
+@keyframes headerHover {
+  0%
+  {
+
+  }
+  100%
+  {
+
+  }
 }

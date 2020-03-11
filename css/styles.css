@@ -1,5 +1,11 @@
 :root {
   --AlmostBlack: #202020;
+  --Blue: #4575f3;
+  --Red: #d36f88;
+  --Orange: #fc8d45;
+  --Purple: #6933b0;
+  --Green: #42c8b0;
+
 
 }
 
@@ -39,7 +45,7 @@ html {
 
 body {
   font-family: 'tex_gyre_heros', Helvetica, Arial, sans-serif;
-
+  font-size: 1rem;
   color: var(--AlmostBlack);
 
   padding:0;
@@ -51,6 +57,10 @@ body {
   margin-left: auto;
   margin-right: auto;
 
+  border-top: solid 2px;
+  border-left: solid 2px;
+  border-color: var(--Blue);
+
 }
 
 header {
@@ -59,23 +69,41 @@ header {
 }
 
 footer {
-  font-size: 0.75rem;
   clear: both;
 }
 
-#flexbox_wrapper {
+#flexbox_wrapper_outer {
   display: flex;
   flex-direction: row-reverse;
-  border-right: solid 2px;
+
+}
+
+#flexbox_wrapper_nav
+{
+  display: flex;
+  flex-direction: column;
+
+}
+
+#navbar {
+
+}
+#empty {
+ flex: 1;
 }
 
 
-
-h1, h2, h3, h4, h5, h6 {
-
+h1 {
+  color: white;
   font-family: "vga";
-  margin: 0;
-  padding: 2rem 3rem 2rem 3rem;
+  margin: 2rem 3rem 2rem 3rem;
+}
+h2, h3, h4, h5, h6 {
+  font-family: "vga";
+  text-align: center;
+
+  margin: auto;
+
 }
 
 
@@ -91,97 +119,66 @@ ul
   margin:  1rem 3rem 1rem 3rem;
 }
 
-.boxbar {
-  background-color: Silver;
-  overflow: hidden;
-}
-.boxbar:hover {
-  background-color: Aqua;
-  overflow: hidden;
-}
+/* BOXES */
+.headerbox{
+  width: 100%;
+  max-width: 550px;
+  margin: 1rem 3rem 1rem 3rem;
 
-.header .boxbar {
-  background-color: var(--AlmostBlack);
-  overflow: hidden;
-}
-.header .boxbar:hover {
-  background-color: Purple;
-
-  overflow: hidden;
-}
-
-
-
-h1 {
-  /* background-image: url('../noise2.png'); */
-  color: white;
-  /* text-shadow: 2px 2px 0px var(--AlmostBlack); */
-
-  font-size: 4em;
-  padding: 2rem 3rem 2rem 3rem;
-}
-h2 {
-  /* text-shadow: 2px 2px 0px white; */
-  font-size: 2.5em;
-  padding: 2rem 3rem 2rem 3rem;
-}
-h3 {
-  /* text-shadow: 2px 2px 0px white; */
-  font-size: 2em;
-  padding: 1.6rem 3rem 1.6rem 3rem;
-}
-h4 {
-  font-size: 1.8em;
-  padding: 1.6rem 3rem 1.6rem 3rem;
-}
-h5 {
-  font-size: 1.5em;
-  padding: 1.3rem 3rem 1.3rem 3rem;
-}
-h6 {
-  font-size: 1.2em;
-  padding: 1.3rem 3rem 1.3rem 3rem;
-}
-
-.header{
-  border: solid 2px;
-  margin: 0 0 -2px 0;
-  overflow: hidden;
 }
 .footer {
-  border: solid 2px;
-  margin: -2px 0 0 0;
-  overflow: hidden;
-}
 
+}
+.header.box {
+  border-bottom: none;
+}
 .box {
-  border-top: solid 2px;
+  background-color: white;
+  border-right: solid 2px;
+  border-bottom: solid 2px;
+  border-color: var(--Blue);
+  overflow: hidden;
 
 }
+.navbar.box {
 
-/* .box:first-child{
-  border-top: none;
-} */
-
-.navbar {
-
-  flex-grow: 0;
-  border-top: solid 2px;
-  border-bottom: solid 2px;
-  background-color: white;
-
-  height: inherit;
-  width: auto;
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
-  align-self:baseline;
+  top: 0px;
+
 }
+
+.boxbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  background-color: white;
+  border-top: solid 2px;
+  border-bottom: solid 2px;
+  border-color: var(--Blue);
+}
+
+
+.header .boxbar {
+  background-color: var(--Blue);
+  overflow: hidden;
+  border: none;
+}
+.header .boxbar:hover {
+  background-color: var(--Green);
+
+}
+
+
+
+
+
+
+
 
 .content {
   flex-grow: 1;
-  border-left: solid 2px;
-  border-right: solid 2px;
+
 }
 
 .content > * {
@@ -215,49 +212,59 @@ h6 {
 @media (max-width: 700px) {
   body {
     width: auto;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin: 4px;
   }
   .content {
-    border-right: none;
+
+
   }
-
-  .navbar {
-      align-self:stretch;
-      border-left: solid 2px;
-        margin: 0 0 -2px 0;
-  }
-
-
-  #flexbox_wrapper {
+  #flexbox_wrapper_outer {
     flex-direction: column;
+
+
   }
+
+  #flexbox_wrapper_nav{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+
+  }
+  #navbar {
+    display: flex;
+    align-items:
+
+  }
+  #empty {
+    display: none;
+  }
+
+  .navbar.box {
+    position: static;
+
+  }
+
+  nav > .boxbar {
+    flex-shrink: 0;
+    border-bottom: none;
+    border-right: 2px solid;
+    border-color: var(--Blue);
+
+  }
+
+
 
   h1 {
-    font-size: 3em;
-    padding: 1.3rem 1.5rem 1.3rem 1.5rem;
-    width: auto;
+    margin: 1rem 1.5rem 1rem 1.5rem;
+
+
   }
-  h2 {
-    font-size: 2em;
-    padding: 1rem 1.5rem 1rem 1.5rem;
+  h2, h3, h4, h5, h6 {
+    margin: 0.5rem 1.5rem 0.5rem 1.5rem;
+
+
   }
-  h3 {
-    font-size: 1.8em;
-    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
-  }
-  h4 {
-    font-size: 1.6em;
-    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
-  }
-  h5 {
-    font-size: 1.4em;
-    padding: 0.6rem 1.5rem 0.6rem 1.5rem;
-  }
-  h6 {
-    font-size: 1.2em;
-    padding: 0.6rem 1.5rem 0.6rem 1.5rem;
-  }
+
   p {
     max-width: 550px;
     text-align: justify;

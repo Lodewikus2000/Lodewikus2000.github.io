@@ -17,43 +17,53 @@
 <body>
     <script src="js/script.js"></script>
 
-    <div class="header">
+    <div class="header box">
         <header>
 
             <div class="boxbar">
                 <h1>Leo Schreuders</h1>
             </div>
 
-            <p>
-              Hopelijk kun je alles vinden wat je zoekt.
-            </p>
+
 
         </header>
     </div>
 
-  <div id="flexbox_wrapper">
-    <div class="navbar">
-        <nav id="navbar">
-            <div class="boxbar">
-                <h3>Menu</h3>
-            </div>
+  <div id="flexbox_wrapper_outer">
 
-            <ul>
-                <li><a href="#verhaaltje">Begin</a></li>
-                <li><a href="#verhaaltje2">Midden</a></li>
-                <li><a href="#verhaaltje3">Einde</a></li>
-                <li><a href="#">link</a></li>
-                <li><a href="https://github.com/Lodewikus2000">Git</a></li>
-            </ul>
+      <div id="flexbox_wrapper_nav">
 
-        </nav>
+          <div class="navbar box">
+              <nav id="navbar">
+                <div class="boxbar">
+                    <div class="headerbox">
+                        <h2>Menu</h2>
+                    </div>
+                </div>
+
+                <ul>
+                    <li><a href="#verhaaltje">Begin</a></li>
+                    <li><a href="#verhaaltje2">Midden</a></li>
+                    <li><a href="#verhaaltje3">Einde</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="https://github.com/Lodewikus2000">Git</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="empty" class="box">
+
+        </div>
+
     </div>
 
 
     <div class="content">
       <div class="article box" id="verhaaltje">
         <div class="boxbar">
-            <h2>Hoe het allemaal begon</h2>
+            <div class="headerbox">
+                <h2>Hoe het allemaal begon</h2>
+            </div>
         </div>
 
         <p>
@@ -77,7 +87,9 @@
 
       <div class="article box" id="verhaaltje2">
         <div class="boxbar">
-            <h2>En hoe het daarna allemaal eindigde</h2>
+            <div class="headerbox">
+                <h2>Wat er in het midden gebeurde</h2>
+            </div>
         </div>
 
         <p>
@@ -94,7 +106,9 @@
 
       <div class="article box" id="verhaaltje3">
         <div class="boxbar">
-            <h2>En hoe het daarna allemaal eindigde</h2>
+            <div class="headerbox">
+                <h2>En hoe het daarna allemaal eindigde</h2>
+            </div>
         </div>
 
         <p>
@@ -118,7 +132,7 @@
 
 
 
-  <div class="footer">
+  <div class="footer box">
       <footer>
         <p> Gemaakt door Leo Schreuders (dat is mijn naam) en zo. Klik <a>hier</a> voor om NIET te mailen. </p>
       </footer>

@@ -5,8 +5,8 @@
   --Orange: #fc8d45;
   --Purple: #6933b0;
   --Green: #42c8b0;
-  --LineWidth: 2px;
-
+  --LineWidth: 1px;
+  --border-color: Silver;
 
 }
 
@@ -59,7 +59,7 @@ body {
   margin-right: auto;
 
   border: solid var(--LineWidth);
-  border-color: var(--Blue);
+  border-color: var(--border-color);
 
 }
 
@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #navbar {
-  display: flex;
+  /* display: flex; */
   max-width: 550px;
   margin: 0 auto 0 auto;
 }
@@ -100,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
   position: -webkit-sticky;
   top: 0;
   border-top: var(--LineWidth) solid;
-  border-color: var(--Blue);
+  border-color: var(--border-color);
 }
 
 
@@ -118,10 +118,14 @@ p {
 
 li
 {
+  font-family: "vga";
   display: inline;
+
 }
 ul
 {
+  display: flex;
+  justify-content: space-evenly;
   padding: 0;
   margin:  1rem 3rem 1rem 3rem;
 }
@@ -133,7 +137,7 @@ ul
 .box {
   background-color: white;
   border-bottom: solid var(--LineWidth);
-  border-color: var(--Blue);
+  border-color: var(--border-color);
   overflow: hidden;
 }
 
@@ -148,8 +152,8 @@ ul
 
 .boxbar {
   border-bottom: solid var(--LineWidth);
-  background-color: var(--Green);
-  border-color: var(--Blue);
+  background-color: white);
+  border-color: var(--border-color);
 }
 
 header > .boxbar {
@@ -158,7 +162,7 @@ header > .boxbar {
 
 .horizontal_boxbar {
   border-right: solid var(--LineWidth);
-  border-color: var(--Blue);
+  border-color: var(--border-color);
 }
 
 .header .boxbar {

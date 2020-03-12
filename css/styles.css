@@ -7,6 +7,8 @@
   --Green: #42c8b0;
   --LineWidth: 2px;
   --border-color: var(--AlmostBlack);
+  --header-font: "tex_gyre_heros";
+  --list-font: "vga";
 
 }
 
@@ -70,7 +72,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "vga";
+  font-family: var(--header-font);
   color: var(--AlmostBlack);
   text-align: center;
   max-width: 550px;
@@ -91,12 +93,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #navbar {
-  /* display: flex; */
-  max-width: 550px;
-  margin: 0 auto 0 auto;
+
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 #navbarbox{
+
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -119,16 +123,38 @@ p {
 
 li
 {
-  font-family: "vga";
-  display: inline;
 
+    font-family: "vga";
+    display: inline;
+    background-color: var(--Green);
+    margin: 0;
 }
+
+li:hover {
+
+    background-color: var(--Red);
+}
+
+li > a
+{
+
+    width: 6rem;
+    text-align: center;
+    color: white;
+    display:block;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
 ul
 {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+
   padding: 0;
-  margin:  1rem 3rem 1rem 3rem;
+  margin:  0;
+
 }
 
 
@@ -155,9 +181,7 @@ ul
   border-bottom: solid var(--LineWidth);
   background-color: white;
   border-color: var(--border-color);
-  position: sticky;
-  position: -webkit-sticky;
-  top: calc(3rem + 7px);
+
 
 
 }
@@ -176,10 +200,10 @@ header > .boxbar {
   overflow: hidden;
 
 }
-.header .boxbar:hover {
+/* .header .boxbar:hover {
   background-color: var(--Green);
 
-}
+} */
 
 
 
@@ -207,7 +231,7 @@ p{
 }
 
   h1, h2, h3, h4, h5, h6 {
-    max-width: 550px;
+
     padding: 1rem 0 1rem 0;
     margin: 0 2rem 0 2rem;
   }
@@ -217,7 +241,22 @@ p{
     margin: 0 2rem 0 2rem;
   }
 
+  #navbar {
+    margin: 0 2rem 0 2rem;
+  }
+
+  li > a
+  {
+      width: 5rem;
+      text-align: center;
+      color: white;
+      display:block;
+      padding: 0.5rem 0 0.5rem 0;
+  }
+
+
 }
+
 
 
 @keyframes headerHover {

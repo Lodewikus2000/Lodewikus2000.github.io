@@ -97,16 +97,20 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 550px;
     margin: 0 auto;
     padding: 0;
+
 }
 
 #navbarbox{
 
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  border-top: var(--LineWidth) solid;
-  border-color: var(--border-color);
-  background-color: var(--Green);
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    border-bottom: var(--LineWidth) solid;
+    border-top: var(--LineWidth) solid;
+    border-color: var(--border-color);
+    background-color: var(--Green);
+    z-index: 10;
+    margin-bottom: -2px;
 }
 
 
@@ -165,8 +169,9 @@ ul
 
 .box {
   background-color: white;
-  border-bottom: solid var(--LineWidth);
-  border-color: var(--border-color);
+  /* border-bottom: solid var(--LineWidth);
+  border-color: var(--border-color); */
+  margin-bottom: -2px;
 
 }
 
@@ -180,9 +185,17 @@ ul
 
 
 .boxbar {
-  border-bottom: solid var(--LineWidth);
+
   background-color: white;
+
+  border-bottom: solid var(--LineWidth);
+  border-top: solid var(--LineWidth);
   border-color: var(--border-color);
+
+  position: sticky;
+  position: -webkit-sticky;
+
+
 
 
 

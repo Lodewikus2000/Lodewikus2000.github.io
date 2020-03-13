@@ -11,7 +11,7 @@ window.onload=function() {
     Array.prototype.forEach.call(bars, function(bar) {
     // Do stuff here
     console.log(h);
-    bar.style.top = h + "px";
+    bar.style.top = h - 2 + "px";
     console.log(bar);
     });
 

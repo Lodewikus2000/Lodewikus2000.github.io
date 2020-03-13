@@ -7,8 +7,8 @@ window.onload=function() {
 
 
     function setBarHeight () {
-        var h = document.getElementById('navbarbox').clientHeight;
-        var bars = document.getElementsByClassName("boxbar");
+        var h = document.getElementById('navbar').clientHeight;
+        var bars = document.getElementsByClassName("header_box");
         Array.prototype.forEach.call(bars, function(bar) {
             // Do stuff here
             bar.style.top = h + "px";

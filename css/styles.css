@@ -106,6 +106,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   border-top: var(--LineWidth) solid;
   border-color: var(--border-color);
+  background-color: var(--Green);
 }
 
 
@@ -126,31 +127,32 @@ li
 
     font-family: "vga";
     display: inline;
-    background-color: var(--Green);
+    flex: 1 0 auto;
     margin: 0;
 }
 
 li:hover {
 
+    overflow:hidden;
     background-color: var(--Red);
 }
 
 li > a
 {
 
-    width: 6rem;
+    /* width: 6rem; */
     text-align: center;
     color: white;
     display:block;
-    padding: 0.5rem 0 0.5rem 0;
+    padding: 0.5rem;
 }
 
 ul
 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-
+  /* justify-content: space-around; */
+  overflow: hidden;
 
   padding: 0;
   margin:  0;
@@ -241,17 +243,18 @@ p{
     margin: 0 2rem 0 2rem;
   }
 
-  #navbar {
+  /* #navbar {
     margin: 0 2rem 0 2rem;
-  }
+  } */
 
   li > a
   {
-      width: 5rem;
+      /* width: 5rem; */
+
       text-align: center;
       color: white;
       display:block;
-      padding: 0.5rem 0 0.5rem 0;
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   }
 
 

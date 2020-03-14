@@ -11,7 +11,7 @@ window.onload=function() {
         var bars = document.getElementsByClassName("header_box");
         Array.prototype.forEach.call(bars, function(bar) {
             // Do stuff here
-            bar.style.top = h + "px";
+            bar.style.top = h - 1 + "px";
 
         });
     };

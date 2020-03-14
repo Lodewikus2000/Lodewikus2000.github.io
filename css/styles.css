@@ -103,7 +103,8 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: var(--LineWidth) solid;
   border-top: var(--LineWidth) solid;
   border-color: var(--border-color);
-  background-color: var(--Green);
+  background-image: url("../dither6.png");
+  background-repeat: repeat-x;
   z-index: 10;
 
 
@@ -198,7 +199,9 @@ ul
 
 
 .title_box {
-  background-color: var(--Blue);
+  background-color: DodgerBlue;
+  background-image: url("../dither5.png");
+  background-repeat: repeat-x;
   overflow: hidden;
 }
 

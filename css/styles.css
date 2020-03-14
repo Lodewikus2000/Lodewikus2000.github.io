@@ -104,6 +104,7 @@ h1, h2, h3, h4, h5, h6 {
   border-top: var(--LineWidth) solid;
   border-color: var(--border-color);
   background-image: url("../dither6.png");
+  background-color: MediumAquaMarine;
   background-repeat: repeat-x;
   z-index: 10;
 
@@ -132,7 +133,9 @@ li
 li:hover {
 
     overflow:hidden;
-    background-color: var(--Red);
+    background-color: orange;
+    background-image: url("../dither7.png");
+    background-repeat: repeat-x;
 }
 
 li > a

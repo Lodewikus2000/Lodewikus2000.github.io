@@ -9,9 +9,17 @@ window.onload=function() {
     function setBarHeight () {
         var h = document.getElementById('navbar').clientHeight;
         var bars = document.getElementsByClassName("header_box");
+
         Array.prototype.forEach.call(bars, function(bar) {
 
-            bar.style.top = h - 1 + "px";
+            bar.style.top = h + 2  + "px";
+
+        });
+        var boxes = document.getElementsByClassName("box");
+        Array.prototype.forEach.call(boxes, function(box) {
+
+            box.style.marginTop = - h  + "px";
+            box.style.paddingTop = h  + "px";
 
         });
     };
@@ -22,6 +30,9 @@ window.onload=function() {
     // title_box.onmouseover = function() {
     //     title_box.style.animation ="headerHover 0.5s linear, headerHover2 0.25s linear 0.5s";
     // }
+
+
+
 
 
 

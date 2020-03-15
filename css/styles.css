@@ -194,13 +194,14 @@ ul
   background-color: white;
 
   border-bottom: solid var(--LineWidth);
-
+  border-top: solid var(--LineWidth);
   border-color: var(--border-color);
 
   position: sticky;
   position: -webkit-sticky;
 
-  margin-bottom: -2px;
+  margin-top: -4px;
+
 
 
 }

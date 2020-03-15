@@ -52,6 +52,10 @@ body {
   color: var(--AlmostBlack);
 
   padding:0;
+  background-image: url("../dither.png");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-attachment: fixed;
   background-color: white;
 
   max-width: 1000px;
@@ -70,7 +74,15 @@ p {
   margin: 1rem auto 1rem auto;
   padding: 0;
   text-align: justify;
+}
 
+p:last-child {
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+}
+p:first-child {
+    padding-top: 1rem;
+    margin-top: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -170,7 +182,7 @@ ul
   background-color: white;
   border-bottom: solid var(--LineWidth);
 
-  position: relative;
+
 
 }
 
@@ -194,6 +206,12 @@ ul
 }
 
 
+.footer_box {
+
+
+    background-color: white;
+}
+
 
 .horizontal_header_box {
   border-right: solid var(--LineWidth);
@@ -203,10 +221,15 @@ ul
 
 .title_box {
   background-color: DodgerBlue;
-  background-image: url("../dither5.png");
+  background-image: url("../dither5_2.png");
   background-repeat: repeat-x;
+  background-position: center -64px;
   overflow: hidden;
+
+
+
 }
+
 
 
 
@@ -264,10 +287,21 @@ p{
 @keyframes headerHover {
   0%
   {
+      background-position: center -64px;
+  }
+  100%
+  {
+      background-position: center calc(100% + 128px);
+  }
+}
+@keyframes headerHover2 {
+  0%
+  {
+      background-position: center -128px;
 
   }
   100%
   {
-
+      background-position: center -64px;
   }
 }
